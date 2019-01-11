@@ -8,24 +8,33 @@
   </head>
   <body>
  <font size=6><center><h1>点数計算表</h1></center></font>
+ <font size=5><h2>符の計算</h2></font>
+ <font size=4><h3>当てはまるところにクリックしてね！</h3></font>
+
+<form name="chbox">
+ <p><input id="st0" type="checkbox" value="10">面前</p>
+ <p>待ち　<input id="st1" type="checkbox" value="2">ペンチャン
+ 　　　　　<input id="st2" type="checkbox" value="2">カンチャン
+ 　　　　　<input id="st3" type="checkbox" value="2">タンキ</p>
+ <p><input id="st4" type="checkbox" value="2">ツモ（平和・七対子・嶺上開花除く）</p>
+<p>刻子　<input id="st5" type="checkbox" value="4">明・１、９、字牌
+  　　　<input id="st6" type="checkbox" value="8">暗・１、９、字牌
+       <input id="st7" type="checkbox" value="2">明・２〜８
+       <input id="st8" type="checkbox" value="4">暗・２〜８</p>
+<p>槓子　<input id="st9" type="checkbox" value="16">明・１、９、字牌
+  　　　<input id="st10" type="checkbox" value="32">暗・１、９、字牌
+  　　　<input id="st11" type="checkbox" value="8">明・２〜８
+  　　　<input id="st12" type="checkbox" value="16">暗・２〜８</p>
+  <input type="button" value="計算" onclick="boxCheck();">
+  <input type="reset" value="リセット">
+
+
+</form>
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <script src = "final.js"></script>
   </body>
 
 </html>
