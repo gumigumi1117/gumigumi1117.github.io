@@ -4,37 +4,98 @@
   <head>
     <meta charset="utf-8">
     <title>点数計算</title>
+  　<script src = "final.js"></script>
+    <script src = "final2.js"></script>
+    <link rel="stylesheet" type="text/css" href="final.css">
+
 
   </head>
   <body>
- <font size=6><center><h1>点数計算表</h1></center></font>
- <font size=5><h2>符の計算</h2></font>
+ <font size=6><center><h1>麻雀点数計算</h1></center></font>
+
+
+<div align = "center">
+ <img src="final1.png" width="300" height="300">
+ <img src="final2.png" width="375" height="300">
+</div>
+
+
+ <div class="outer">
+
+<div class="inner">
+<font size=5><h2>符の計算</h2></font>
  <font size=4><h3>当てはまるところにクリックしてね！</h3></font>
 
 <form name="chbox">
- <p><input id="st0" type="checkbox" value="10">面前</p>
- <p>待ち　<input id="st1" type="checkbox" value="2">ペンチャン
- 　　　　　<input id="st2" type="checkbox" value="2">カンチャン
- 　　　　　<input id="st3" type="checkbox" value="2">タンキ</p>
- <p><input id="st4" type="checkbox" value="2">ツモ（平和・七対子・嶺上開花除く）</p>
-<p>刻子　<input id="st5" type="checkbox" value="4">明・１、９、字牌
-  　　　<input id="st6" type="checkbox" value="8">暗・１、９、字牌
-       <input id="st7" type="checkbox" value="2">明・２〜８
-       <input id="st8" type="checkbox" value="4">暗・２〜８</p>
-<p>槓子　<input id="st9" type="checkbox" value="16">明・１、９、字牌
-  　　　<input id="st10" type="checkbox" value="32">暗・１、９、字牌
-  　　　<input id="st11" type="checkbox" value="8">明・２〜８
-  　　　<input id="st12" type="checkbox" value="16">暗・２〜８</p>
+ <p><input class="last" type="checkbox" value="10">面前</p>
+ <p>待ち　<input class="last" type="checkbox" value="2">ペンチャン
+ 　　　　　<input class="last" type="checkbox" value="2">カンチャン
+ 　　　　　<input class="last" type="checkbox" value="2">タンキ</p>
+ <p><input class="last" type="checkbox" value="2">ツモ（平和・七対子・嶺上開花除く）</p>
+<p>刻子　<input class="last" type="checkbox" value="4">明・１、９、字牌
+  　　　<input class="last" type="checkbox" value="8">暗・１、９、字牌
+       <input class="last" type="checkbox" value="2">明・２〜８
+       <input class="last" type="checkbox" value="4">暗・２〜８</p>
+<p>槓子　<input class="last" type="checkbox" value="16">明・１、９、字牌
+  　　　<input class="last" type="checkbox" value="32">暗・１、９、字牌
+  　　　<input class="last" type="checkbox" value="8">明・２〜８
+  　　　<input class="last" type="checkbox" value="16">暗・２〜８</p>
   <input type="button" value="計算" onclick="boxCheck();">
   <input type="reset" value="リセット">
 
-
 </form>
+<font size=5><h2>次は点数計算！</h2></font>
+<font size=4><h3>さっき計算した符と自分の翻を選んでね！</h3></font>
+
+<p>
+<label for="hu">符を選択してください：</label>
+<select id="hu" name="hu">
+<option class="keisan" value="nm1">２０符</option>
+<option class="keisan" value="nm2" selected>３０符</option>
+<option class="keisan" value="nm3">４０符</option>
+<option class="keisan" value="nm4">５０符</option>
+<option class="keisan" value="nm5">６０符</option>
+<option class="keisan" value="nm6">７０符</option>
+</select>
+</p>
+
+<p>
+<label for="han">翻を選択してください：</label>
+<select id="han" name="han">
+<option class="keisan" value="nm7">３翻</option>
+<option class="keisan" value="nm8">４翻</option>
+<option class="keisan" value="nm9">５翻</option>
+<option class="keisan" value="nm10" selected>６翻</option>
+<option class="keisan" value="nm11">７翻</option>
+<option class="keisan" value="nm12">８、９翻（満貫）</option>
+<option class="keisan" value="nm13">１０、１１、１２翻（ハネ満）</option>
+<option class="keisan" value="nm14">１３翻（三倍満）</option>
+<option class="keisan" value="nm15">１４翻（役満）</option>
+
+</select>
+</p>
+
+<input type="button" value="計算" onclick="Select();">
+<input type="button" value="リセット" onclick="reset();">
+
+<font size=4><h3>役は覚えよう！</h3></font>
+<br>
+ <form method=get action="http://www.google.co.jp/search">
+
+     <a href="http://www.google.co.jp/">
+     </a>
+     <input type=text name=q value="麻雀の役">
+
+     <input type=submit value="Google 検索">
+ </form>
+</br>
 
 
 
 
-    <script src = "final.js"></script>
+
+</div>
+
   </body>
 
 </html>
